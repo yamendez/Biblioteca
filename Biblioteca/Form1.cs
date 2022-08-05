@@ -15,6 +15,19 @@ namespace Biblioteca
         public Form1()
         {
             InitializeComponent();
+            cbxGene.SelectedIndex = 0;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Libros libros = new Libros();
+            libros.Titulo = txtTitulo.Text;
+            libros.Autor = txtAutor.Text;
+            libros.Editorial = txtEdito.Text;
+            libros.Genero = cbxGene.SelectedIndex;
+            libros.Cantidad = int.Parse(txtCant.Text);
+
+            libros.Registrar();
         }
     }
 }
