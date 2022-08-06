@@ -41,5 +41,28 @@ namespace Biblioteca
             }
 
         }
+
+        public MySqlDataReader Consultar()
+        {
+            //MySqlDataReader libros = null;
+            string query = "select t1.titulo, t2.genero, t1.autor, t1.editorial, t1.cantidad " +
+                "from libros t1 inner join generos t2 " +
+                "on t1.id_genero = t2.id";
+            //string sql = "select * from libros";
+
+            MySqlConnection con = Conexion.Conectar();
+            con.Open();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                MySqlDataReader libros = cmd.ExecuteReader();
+                return libros;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
     }
 }

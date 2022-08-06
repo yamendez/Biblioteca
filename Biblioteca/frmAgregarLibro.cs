@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Biblioteca
 {
-    public partial class Form1 : Form
+    public partial class frmAgregarLibro : Form
     {
-        public Form1()
+        public frmAgregarLibro()
         {
             InitializeComponent();
             cbxGene.SelectedIndex = 0;
@@ -28,6 +28,10 @@ namespace Biblioteca
             libros.Cantidad = int.Parse(txtCant.Text);
 
             libros.Registrar();
+
+            this.Hide();
+            frmMostrarLibro showlib = new frmMostrarLibro();
+            showlib.Show();
         }
     }
 }
