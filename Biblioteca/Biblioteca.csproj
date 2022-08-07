@@ -156,5 +156,8 @@
   <ItemGroup>
     <None Include="Resources\Logo libreria.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

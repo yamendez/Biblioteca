@@ -29,6 +29,7 @@ namespace Biblioteca
                 form.Dock = DockStyle.Fill;
                 pnlPantalla.Controls.Add(form);
                 pnlPantalla.Tag = form;
+                form.BringToFront();
                 form.Show();
             }
             else
@@ -39,6 +40,7 @@ namespace Biblioteca
                 form.Dock = DockStyle.Fill;
                 pnlPantalla.Controls.Add(form);
                 pnlPantalla.Tag = form;
+                form.BringToFront();
                 form.Show();
 
             }
@@ -52,6 +54,11 @@ namespace Biblioteca
         private void btnAdd_Click(object sender, EventArgs e)
         {
             OpenForm(new frmAgregarLibro());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmactivo.Close();
         }
     }
 }

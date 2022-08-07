@@ -37,7 +37,10 @@
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvTabla
@@ -55,21 +58,21 @@
             this.Autor,
             this.Editorial,
             this.Cantidad});
-            this.dgvTabla.Location = new System.Drawing.Point(12, 129);
+            this.dgvTabla.Location = new System.Drawing.Point(12, 200);
             this.dgvTabla.MultiSelect = false;
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.ReadOnly = true;
             this.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTabla.Size = new System.Drawing.Size(646, 292);
+            this.dgvTabla.Size = new System.Drawing.Size(646, 221);
             this.dgvTabla.TabIndex = 0;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(12, 93);
+            this.btnUpdate.Location = new System.Drawing.Point(12, 164);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(109, 30);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Actualizar Libros";
+            this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -115,24 +118,49 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(127, 93);
+            this.btnDelete.Location = new System.Drawing.Point(127, 164);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 30);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(670, 100);
+            this.panel1.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Pink Chicken", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(240, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(181, 42);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Listar Libros";
             // 
             // frmMostrarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 433);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvTabla);
             this.Name = "frmMostrarLibro";
             this.Text = "Mostrar Libros";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -148,5 +176,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
     }
 }

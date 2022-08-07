@@ -60,5 +60,24 @@ namespace Biblioteca
                     );
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dgvTabla.Rows[dgvTabla.CurrentRow.Index].Cells[0].Value.ToString());
+            Libros libros = new Libros();
+            libros.Id = id;
+
+            DialogResult dr = MessageBox.Show("Seguro que quiere eliminar esta fila?","Confirmacion", 
+                MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes) {
+                libros.Borrar();
+                dgvTabla.Rows.Clear();
+                listar();
+            }
+            else if (dr == DialogResult.Yes) {
+
+            }
+            //FormClosed += Fupdate_FormClosed;
+        }
     }
 }
