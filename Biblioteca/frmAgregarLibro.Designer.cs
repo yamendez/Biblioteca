@@ -36,11 +36,11 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtEdito = new System.Windows.Forms.TextBox();
-            this.txtCant = new System.Windows.Forms.TextBox();
             this.cbxGene = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtCant = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,13 +110,6 @@
             this.txtEdito.Size = new System.Drawing.Size(121, 20);
             this.txtEdito.TabIndex = 7;
             // 
-            // txtCant
-            // 
-            this.txtCant.Location = new System.Drawing.Point(360, 228);
-            this.txtCant.Name = "txtCant";
-            this.txtCant.Size = new System.Drawing.Size(121, 20);
-            this.txtCant.TabIndex = 8;
-            // 
             // cbxGene
             // 
             this.cbxGene.FormattingEnabled = true;
@@ -162,15 +155,24 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Agregar Libros";
             // 
+            // txtCant
+            // 
+            this.txtCant.Location = new System.Drawing.Point(360, 228);
+            this.txtCant.Mask = "000000";
+            this.txtCant.Name = "txtCant";
+            this.txtCant.Size = new System.Drawing.Size(121, 20);
+            this.txtCant.TabIndex = 12;
+            this.txtCant.ValidatingType = typeof(int);
+            // 
             // frmAgregarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 411);
+            this.Controls.Add(this.txtCant);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cbxGene);
-            this.Controls.Add(this.txtCant);
             this.Controls.Add(this.txtEdito);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.txtTitulo);
@@ -198,11 +200,11 @@
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.TextBox txtEdito;
-        private System.Windows.Forms.TextBox txtCant;
         private System.Windows.Forms.ComboBox cbxGene;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox txtCant;
     }
 }
 

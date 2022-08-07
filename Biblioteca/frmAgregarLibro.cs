@@ -28,10 +28,7 @@ namespace Biblioteca
             libros.Cantidad = int.Parse(txtCant.Text);
 
             libros.Registrar();
-
-            //this.Hide();
-            //frmMostrarLibro showlib = new frmMostrarLibro();
-            //showlib.Show();
         }
+
     }
 }
