@@ -159,5 +159,9 @@
   <ItemGroup>
     <None Include="Resources\Icono.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="BibliotecaDatabase\biblioteca_generos.sql" />
+    <Content Include="BibliotecaDatabase\biblioteca_libros.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

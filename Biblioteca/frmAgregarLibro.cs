@@ -28,6 +28,12 @@ namespace Biblioteca
             libros.Cantidad = int.Parse(txtCant.Text);
 
             libros.Registrar();
+
+            txtTitulo.Text = "";
+            txtAutor.Text = "";
+            txtEdito.Text = "";
+            cbxGene.SelectedIndex = 0;
+            txtCant.Text = "";
         }
 
     }
