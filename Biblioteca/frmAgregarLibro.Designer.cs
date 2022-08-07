@@ -121,7 +121,7 @@
             "Selecione...",
             "Fantasia",
             "Aventura",
-            "Cuentos",
+            "Cuento de hadas",
             "Ciencia Ficcion"});
             this.cbxGene.Location = new System.Drawing.Point(291, 58);
             this.cbxGene.Name = "cbxGene";
@@ -138,7 +138,7 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // Form1
+            // frmAgregarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,7 +154,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "frmAgregarLibro";
             this.Text = "Agregar Libros";
             this.ResumeLayout(false);
             this.PerformLayout();

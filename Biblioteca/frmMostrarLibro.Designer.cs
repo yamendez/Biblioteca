@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvTabla = new System.Windows.Forms.DataGridView();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregarL = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,18 +44,41 @@
             // 
             this.dgvTabla.AllowUserToAddRows = false;
             this.dgvTabla.AllowUserToDeleteRows = false;
+            this.dgvTabla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Titulo,
             this.Genero,
             this.Autor,
             this.Editorial,
             this.Cantidad});
-            this.dgvTabla.Location = new System.Drawing.Point(12, 96);
+            this.dgvTabla.Location = new System.Drawing.Point(12, 129);
+            this.dgvTabla.MultiSelect = false;
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.ReadOnly = true;
-            this.dgvTabla.Size = new System.Drawing.Size(632, 227);
+            this.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTabla.Size = new System.Drawing.Size(646, 292);
             this.dgvTabla.TabIndex = 0;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(12, 93);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(109, 30);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Actualizar Libros";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 50;
             // 
             // Titulo
             // 
@@ -88,22 +113,22 @@
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             // 
-            // btnAgregarL
+            // btnDelete
             // 
-            this.btnAgregarL.Location = new System.Drawing.Point(12, 56);
-            this.btnAgregarL.Name = "btnAgregarL";
-            this.btnAgregarL.Size = new System.Drawing.Size(84, 23);
-            this.btnAgregarL.TabIndex = 1;
-            this.btnAgregarL.Text = "Agregar Libro";
-            this.btnAgregarL.UseVisualStyleBackColor = true;
-            this.btnAgregarL.Click += new System.EventHandler(this.btnAgregarL_Click);
+            this.btnDelete.Location = new System.Drawing.Point(127, 93);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 30);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // frmMostrarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 335);
-            this.Controls.Add(this.btnAgregarL);
+            this.ClientSize = new System.Drawing.Size(670, 433);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvTabla);
             this.Name = "frmMostrarLibro";
             this.Text = "Mostrar Libros";
@@ -115,11 +140,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTabla;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.Button btnAgregarL;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -29,9 +29,9 @@ namespace Biblioteca
 
             libros.Registrar();
 
-            this.Hide();
-            frmMostrarLibro showlib = new frmMostrarLibro();
-            showlib.Show();
+            //this.Hide();
+            //frmMostrarLibro showlib = new frmMostrarLibro();
+            //showlib.Show();
         }
     }
 }
